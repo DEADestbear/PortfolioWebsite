@@ -17,12 +17,12 @@
         
         <nav>
             <ul class="read">
-                <li class="nav"><a href="my_homepage.php" class="mainLink">About Me</a></li>
-                <li class="nav"><a href="expirence.php" class="mainLink" >Expirence</a></li>
-                <li class="nav"><a href="portfolio.php" class="mainLink">Portfolio</a></li>
-                <li class="nav"><a href="logout.php" class="mainLink">Logout</a></li>
-                <il class="nav"><a href="viewBlog.php" class="mainLink">Blog</a></il>
-                
+                <li class="nav"><a href="/my_homepage" class="mainLink">About Me</a></li>
+                <li class="nav"><a href="/expirence" class="mainLink" >Expirence</a></li>
+                <li class="nav"><a href="/portfolio" class="mainLink">Portfolio</a></li>
+                <li class="nav"><a href="/logout" class="mainLink">Logout</a></li>
+                <li class="nav"><a href="/viewBlog" class="mainLink">Blog</a></li>
+
             </ul>
         </nav>    
         
@@ -34,7 +34,7 @@
             <h2>Blog</h2>
             <aside class="welcomeAdmin"><p>Welcome admin</p></aside>
             <article class="blogPosting">
-                <form action="addPost.php" method="post">
+                <form action="/addPost" method="POST">
                     <label for="title">Title:</label>
                     <br>
                     <input type="text" name="title" id="title" class="title" required>
@@ -71,7 +71,7 @@
             
             <br>
 
-            <form action="addPost.php" method="post" id="previewForm">
+            <form action="/addPost" method="post" id="previewForm">
                 <input type="hidden" name="title" id="hiddenTitle"> 
                 <input type="hidden" name="content" id="hiddenContent">
                 <div class="btn-container">
