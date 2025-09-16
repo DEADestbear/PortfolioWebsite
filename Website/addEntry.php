@@ -1,0 +1,105 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['email'])) {
+        header("Location: login.html");
+        exit();
+    }
+
+    $email = $_SESSION['email'];
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainCSS.css" type="text/css" />
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)"/>
+    <script src="blogForum.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid">
+    <header class="containerHeader">
+        <h1>Mr Jack Morray</h1>
+        
+        <nav>
+            <ul class="read">
+                <li class="nav"><a href="my_homepage.php" class="mainLink">About Me</a></li>
+                <li class="nav"><a href="expirence.php" class="mainLink" >Expirence</a></li>
+                <li class="nav"><a href="portfolio.php" class="mainLink">Portfolio</a></li>
+                <li class="nav"><a href="logout.php" class="mainLink">Logout</a></li>
+                <il class="nav"><a href="viewBlog.php" class="mainLink">Blog</a></il>
+                
+            </ul>
+        </nav>    
+        
+    </header>
+    
+    <main>
+        
+        <div class="blogs" id="blogs">
+            <h2>Blog</h2>
+            <aside class="welcomeAdmin"><p>Welcome admin</p></aside>
+            <article class="blogPosting">
+                <form action="addPost.php" method="post">
+                    <label for="title">Title:</label>
+                    <br>
+                    <input type="text" name="title" id="title" class="title" required>
+                    <br>
+                    <br>
+                    <label for="content">Content:</label>
+                    <br>
+                    <textarea name="content" id="content" class="content" required></textarea>
+                    <br>
+                    <div class="btn-container">
+                        <input type="submit" value="Post" class="postButton" id="postButton">
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" value="Clear" class="clearButton" id="clearButton">Clear</button>
+                        
+                    </div>
+
+                    <div class="btn-container">
+                        <button type="button" value="preview" class="previewButton" id="previewButton">preview</button>
+                    </div>
+
+                </form>
+            </article>
+        </div>
+
+
+        <div class="previewScreen" id="previewScreen">
+            <h2>Preview</h2>
+            <br>
+            <h3 id="previewTitle"></h3>
+            <p id="previewContent"></p>
+            <p id="previewTime"></p>
+            
+            <br>
+
+            <form action="addPost.php" method="post" id="previewForm">
+                <input type="hidden" name="title" id="hiddenTitle"> 
+                <input type="hidden" name="content" id="hiddenContent">
+                <div class="btn-container">
+                    <input type="submit" value="Post" class="postButton" id="postButton">
+                    <button type="button" value="edit" class="editButton" id="editButton">Edit</button>
+                </div>
+            </form>
+        </div>
+
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Jack Morray</p>
+    </footer>
+    </div>
+</body>
+</html>

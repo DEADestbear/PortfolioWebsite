@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MainCSS.css" type="text/css" />
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)"/>
+    <script src="blogForum.js" defer></script> <!-- This is a script element that links to an external JavaScript file called blogForum.js. The defer attribute tells the browser to execute the script after the HTML document has been completely parsed. -->
+    <title>Login</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="containerHeader">
+            <h1>Mr Jack Morray</h1>
+            <nav>
+                <ul class="read">
+                    <li class="nav"><a href="my_homepage.php" class="mainLink">About Me</a></li>
+                    <li class="nav"><a href="expirence.php" class="mainLink" >Expirence</a></li>
+                    <li class="nav"><a href="portfolio.php" class="mainLink">Portfolio</a></li>
+                    <li class="nav"><a href="viewBlog.php" class="mainLink">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="loginForm">
+                <form action="login.php" method="post"> <!-- method post is hidden from the user and get can be seen by the user -->
+                    <label for="email">Email:</label> <!-- This is a label element that describes the input element that follows it -->
+                    <br>
+                    <input type="email" name="email" id="email" class="email" required> <!-- This is an input element that allows the user to enter a username -->
+                    <br>
+                    <br>
+                    <label for="password">Password:</label> <!-- This is a label element that describes the input element that follows it -->
+                    <br>
+                    <input type="password" name="password" id="password" class="password" required minlength="8"> <!-- This is an input element that allows the user to enter a password -->
+                    <br>
+                    <div class="btn-container-loginBtn"> <!-- This is a div element that contains the login button -->
+                        <input type="submit" value="Login" class="loginButton">
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Jack Morray</p>
+            </footer>
+        </main>
+
+
+    </div>
+</body>
+</html>

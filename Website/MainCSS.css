@@ -1,0 +1,485 @@
+h1 {
+    padding: 0.5em;
+    font-size: 2em;
+    color: white;
+    text-align: left;
+    padding-right: 20pt;
+    padding-left: 20pt;
+    
+}
+
+aside {
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding-right: 20pt;
+    padding-left: 20pt;
+    padding-top: 1em;
+    grid-row: 1;
+    grid-column: 2;
+    
+
+}
+
+.welcomeAdmin {
+    width: 40vw
+}
+
+
+.blogPost ,.previewScreen{
+    flex-direction: column;
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    max-width: 2fr;
+    height: auto;
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+
+
+.blogPost p, .previewScreen p, .previewScreen h3 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+h2 {
+    font-family: "Audiowide", sans-serif; /* Use the Audiowide font imported from google fonts and if not the text will be sans-serif*/	
+}
+
+.grid { /* this is a grid used on the web page the grid fuctions as a 2D layout system using rows and colums to allow you to orintate sections on the html page */
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        'header header header'
+        'hobbies aboutMeContainer links'
+        'hobbies aboutMeContainer cv'
+        'login education skills'
+        'footer footer footer';
+    column-gap: 2rem;
+    row-gap: 2rem;
+    flex-grow: 1;
+}
+
+.nav {
+    padding: 0.5em;
+    padding-top: 1em;
+    font-size: 1.5em;
+    display: flex;
+    white-space: nowrap;
+    word-break: break-all;
+    
+    
+}
+
+
+
+.aboutMe {
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    text-align: left;
+    grid-column: 2;
+}
+
+.aboutMe h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.aboutMe p {
+    padding: 0.5em;
+}
+
+.picMe {
+    min-width: 150pt;
+    display: block;
+    padding-right: 0.1em;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
+
+
+
+.image {
+    grid-column: 1;
+
+}
+
+.hobbies {
+    grid-area: hobbies;
+    padding: 0em;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+}
+
+.hobbies p {
+    padding: 0.5em;
+}
+
+.hobbies h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.containerHeader {
+    min-height: 100%;
+    display: flex;
+    gap: 0.7rem;
+    background-color: #426B69;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: header;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mainLink {
+    color: white;
+    text-decoration: none;
+}
+
+.outLink,.project a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.read {
+    flex: auto;
+    display: flex;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #426B69;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+.cv {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: white;
+    display: block;
+    border: solid 0.5em #A1B5B4;
+}
+
+.cv p {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.links {
+    grid-area: links;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    display: block;
+    
+    
+}
+
+.links ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.links p {
+    padding: 0.5em;
+}
+
+.links h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.cv h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+main {
+    display: contents; 
+    
+}
+
+html, body {
+    min-height: 100%;
+    
+
+}
+
+.btn-container { /*this uses a flex box to order the */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.loginForm { 
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+}
+
+.loginForm fourm {
+    display: flex;
+    text-align: center;
+}
+
+.login h2{
+    background-color: #426B69;
+    font-size: 1.5em; /*uses font size as it gidance*/
+    text-align: center;
+    color: white;
+    
+}
+
+.btn-container-loginBtn {
+    display: flex; /*this is a flexbox a 1D layout system tha lays out items in cloums or rows and can align items in rows and coluoms it is also dynamic*/
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.email,.password {
+    border: solid 0.01em black;
+    font-size: 1.5em;
+    padding-left: 0.2em;
+}
+
+.loginButton, .clearButton {
+    background-color: #426B69;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    border: none;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+.loginButton:hover ,.clearButton:hover, .postButton:hover, .previewButton:hover, .editButton:hover{
+    background-color: #426B69;
+    color: black;
+}
+
+.aboutMeContainer {
+    grid-area: aboutMeContainer; /* Assign it a grid area */
+    display: grid;
+    grid-template-columns: 1fr 2fr;/* Makes .aboutMe larger than .image */
+    grid-template-rows: 1fr; 
+    border: solid 0.5em #A1B5B4; /* Single border around both items */
+    background-color: white;
+}
+
+.education {
+    grid-column: 2;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    display: block;
+}
+
+.education h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.education p {
+    padding: 0.5em;
+}
+
+.education h3 {
+    padding: 0.5em;
+}
+
+.skills {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    text-align: center;
+    display: block;
+}
+
+.skills h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.blogs{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+}
+
+.blogs h2 {
+    background-color: #426B69;
+    width: 100%;
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.previewScreen h2{
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.previewScreen {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    display: block;
+    max-width: 2fr;
+    height: auto;
+    overflow-y: auto;
+    overflow: hidden;
+}
+
+.previewContent {
+    width: 100%;
+    overflow: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+
+    
+}
+
+#previewContent {
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Ensures text wraps properly */
+    white-space: pre-wrap; /* Preserves whitespace and wraps text */
+    text-align: center; /* Optional: Align text to the left */
+    width: 100%; /* Ensures it takes the full width of the container */
+    padding: 0.5em; /* Adds some padding for better readability */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.title {
+    font-size: 1.5em;
+    text-align: center;
+    min-height: 10pt;
+    max-height: 10pt;
+    width: 40vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: solid 0.01em black;
+}
+
+.content {
+    min-height: 10pt;
+    max-height: 20vw;
+    min-width: 40vw;
+    max-width: 40vw;
+    width: auto;
+    border: solid 0.1em black;
+}
+
+#previewForm {
+    height: auto;
+    align-items: center;
+}
+.postButton, .previewButton, .editButton {
+    background-color: #426B69;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    border: none;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+.experience {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    display: block;
+}
+
+.experience h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.experience p {
+    padding: 0.5em;
+}
+
+.project {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: white;
+    border: solid 0.5em #A1B5B4;
+    display: block;
+}
+
+.project h2 {
+    background-color: #426B69;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.project p {
+    padding: 0.5em;
+}
+
+.project ul {
+    list-style-type: none;
+    padding: 0.5em;
+}

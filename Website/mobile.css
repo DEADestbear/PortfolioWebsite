@@ -1,0 +1,144 @@
+
+
+h1 {
+    padding: 0.5em;
+    font-size: 1.5em; /* Smaller font for mobile */
+    color: white;
+    text-align: center; /* Center aligns for better mobile display */
+}
+
+* {
+    flex-wrap: wrap;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-areas:
+        'header'
+        'aboutMeContainer'
+        'hobbies'
+        'links'
+        'cv'
+        'project'
+        'login'
+        'education'
+        'skills'
+        'experience'
+        'blog'
+        'footer'
+        ;
+    gap: 1rem; /* Reduces space between sections */
+    min-height: 100vh;
+    flex-grow: 1;
+    
+}
+
+.education {
+    grid-row: 3;
+    grid-column: 1; /* Full width on mobile */
+     /* Center content */
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.experience {
+    grid-row: 4;
+    grid-column: 1; /* Full width on mobile */
+     /* Center content */
+    /* Center content */
+}
+
+
+/* Navigation */
+.nav {
+    font-size: 1.2em; /* Reduce size */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+    text-align: center;
+}
+
+/* About Me */
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center content */
+    border: solid 0.3em #A1B5B4;
+    background-color: white;
+    padding: 1rem;
+}
+
+.aboutMe h2 {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.aboutMe p {
+    padding: 0.5em;
+    text-align: justify;
+}
+
+/* project */
+.project {
+    grid-area: project;
+    display: block;
+}
+/* Image */
+.picMe {
+    width: 100%; /* Full width on small screens */
+    max-width: 250px; /* Limits size */
+    height: auto;
+}
+/* portfolio */
+
+.blogPost {
+    grid-column: 1;
+    display: block;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+}
+
+.cv {
+    grid-area: cv;
+    display: block;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+}
+
+/* Sections */
+.hobbies, .project, .cv, .links, .login, .education, .skills, .loginForm, .blog, .experience {
+    border: solid 0.3em #A1B5B4;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hobbies h2, .project h2, .cv h2, .links h2, .login h2, .education h2, .skills h2, .experience h2 {
+    font-size: 1.3em;
+    background-color: #426B69;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Login Form */
+.loginForm {
+    grid-column: 1;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+}
+
+/* Blog */
+.blogs, .previewScreen {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content */
+}
+
